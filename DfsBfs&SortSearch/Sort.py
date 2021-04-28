@@ -64,7 +64,8 @@ def quick_sort(array, start, end):
         if left > right:
             array[pivot], array[right] = array[right], array[pivot]
         # 두 동선이 엇갈리지 않을 경우 두 데이터를 swape
-        array[left], array[right] = array[right], array[left]
+        else :
+            array[left], array[right] = array[right], array[left]
     # 분할 이후 왼쪽과 오른쪽 각각 정렬진행 ( 재귀호출 )
     quick_sort(array, start, right-1)
     quick_sort(array, right + 1, end)
